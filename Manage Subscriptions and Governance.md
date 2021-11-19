@@ -115,15 +115,32 @@ New-AzPolicyAssignment -Name 'audit-vm-manageddisks' -DisplayName 'Audit VMs wit
 PowerShell  
 
 ```PowerShell
-
-New-AzResourceLock -LockLevel CanNotDelete -LockName LockSite -ResourceName examplesite
-
+> New-AzResourceLock -LockLevel CanNotDelete -LockName LockSite -ResourceName examplesite
 ```
 
 Azure CLI
 
 ```Bash
-
-az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampleresourcegroup
-
+> az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampleresourcegroup
 ```
+
+---
+### *Creating and Managing Resource Groups*
+
+> - Resource groups are containers that hold related Azure resources
+> - Resources can be moved from one resource group to another if that is supported by that resource
+> - Moving resources does not change the location/region where it was originally created
+> - Deleting a resource group deletes all resources in that resource group
+>  - All resources must have an associated Resource Group
+
+
+PowerShell
+```PowerShell
+> New-AzResourceGroup -name example-rg -location eastus2
+```
+
+Azure CLI
+```Bash
+> az group create --name example-rg --location eastus2
+```
+

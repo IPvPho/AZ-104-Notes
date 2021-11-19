@@ -1,4 +1,4 @@
-[Title]: <> (AZ-104 Notes | Tim Warner | Pluralsight)
+[//]: <> (AZ-104 Notes | Tim Warner | Pluralsight)
 
 # ***Managing Azure AD Objects***
 ---
