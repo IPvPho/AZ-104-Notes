@@ -55,3 +55,23 @@
 - Blocks user from performing specific actions if a role assignment allows it
 - Created and managed in Azure to protect resources
 - Can only be created using Azure Blueprints or Managed Apps
+
+
+#### *Creating a Custom Role with PowerShell*
+---
+
+```PowerShell
+
+$role = Get-AzRoleDefinition "Virtual Machine Contributor"
+$role.Id = $null
+$role.Name = "VM reader"
+$role.Description = "Can see VMs"
+$role.Actions.Clear()
+$role.Actions.Add("Microsoft.Storage/*/read")
+$role.Actions.Add("Microsoft.Network/*/read")
+$role.Actions.Add("Microsoft.Compute/*/read")\
+$role.AssignableScopes.clear() 
+$role.AssignableScopes.Add("/subscriptions/0000-1111-2222-aaaa-12345678")
+New-AzRoleDefinition -Role $role
+
+```
