@@ -21,24 +21,32 @@
 
 ### <ins>*Security Principals*</ins>
 
-**User:** Has a profile in AAD, can be assigned to users in other tenants
+**User:** 
+- Has a profile in AAD, can be assigned to users in other tenants
 
-**Group:** Multiple users are assigned within this scope, roles assigned to a group impact all users
+**Group:** 
+- Multiple users are assigned within this scope, roles assigned to a group impact all users
 
-**Service Principal:** A security ID for applications or services to access specific Azure resource (User / Password for application)
+**Service Principal:** 
+- A security ID for applications or services to access specific Azure resource (User / Password for application)
 
-**Managed Identity:** Typically used in developing cloud applications to handle credential management (i.e. Key Vault)
+**Managed Identity:** 
+- Typically used in developing cloud applications to handle credential management (i.e. Key Vault)
 
 #### <ins>*Roles*</ins>
 (*Only apply to resource itself, not what the resource contains*)
 
-**Owner:** Full access to all resources and grant access
+**Owner:** 
+- Full access to all resources and grant access
 
-**Contributor:** Can create/manage all resources, **cannot** grant access
+**Contributor:** 
+- Can create/manage all resources, **cannot** grant access
 
-**Reader:** Can view existing resources, cannot manage (i.e. cannot start/stop a VM)
+**Reader:** 
+- Can view existing resources, cannot manage (i.e. cannot start/stop a VM)
 
-**User Access Administrator:** Allows you to manage access to Azure resources
+**User Access Administrator:** 
+- Allows you to manage access to Azure resources
 
 #### *Deny Assignments*
 
