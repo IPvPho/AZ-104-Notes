@@ -215,5 +215,5 @@ Object Name == az-104-outline.pdf
 >   - Azure storage access that allows you to access blob and queue data, storage access but doesn't allow you to navigate resources in Azure.
 > - Management Permissions
 >   - Allows you to naviagte resources in Azure. Assigned with Azure Resource Manager role, 'Reader' role is best suited for most restricted access while allowing read access
-> - Should be scoped at storage account or higher (Resource Group or Subscription)
+>   - Should be scoped at storage account or higher (Resource Group or Subscription)
 
