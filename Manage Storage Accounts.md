@@ -217,3 +217,16 @@ Object Name == az-104-outline.pdf
 >   - Allows you to naviagte resources in Azure. Assigned with Azure Resource Manager role, 'Reader' role is best suited for most restricted access while allowing read access
 >   - Should be scoped at storage account or higher (Resource Group or Subscription)
 
+### *Network Access Control*
+
+#### *Azure Storage Firewalls and Virtual Networks*
+
+> - Layered Security Model
+> - Limit Access by rules:
+>   - IP Addresses
+>   - IP Ranges
+>   - Subnets in Azure vNets
+> - Requires Authorization for applications (Azure AD or SAS Token)
+> - vNets can be selected or created when allowing them access to storage accounts (creating will take roughly 15 minutes)
+>   - Can add client IP Address as allowable during creating/addition process
+ 
