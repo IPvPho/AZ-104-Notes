@@ -20,15 +20,15 @@
 
 #### *Types of Storage Accounts*
 
-> - General-purpose v2
+> - **General-purpose v2**
 >   - All types of Azure storage data objects, supports Data Lake Gen 2 data, recommended for most use cases
-> - General-purpose v1
+> - **General-purpose v1**
 >   - Legacy accounts for blobs, files, queues and tables (upgrade to v1 when possible)
-> - BlockBlobStorage
+> - **BlockBlobStorage**
 >   - Premium performance only for BlockBlobs and AppendBlobs, useful for scenarios with low storage latency, higher transaction rates, and the data objects are smaller.
-> - FileStorage
+> - **FileStorage**
 >   - Premium tier performance for Files, only stores files, enterprise applications or high-performance scale applications
-> - BlobStorage
+> - **BlobStorage**
 >   - Legacy Blob only storage account (use General-purpose v2 whenever possible)
 
 
@@ -172,11 +172,48 @@ Object Name == az-104-outline.pdf
 
 #### *Authorizing Access to Azure Storage Data*
 
-|                    | Shared Key (Storage Account Key( | Shared Access Signature (SAS) | Azure AD                                       | Anonymous Public Read Access |
+|                    | Shared Key (Storage Account Key) | Shared Access Signature (SAS) | Azure AD                                       | Anonymous Public Read Access |
 |--------------------|----------------------------------|-------------------------------|------------------------------------------------|------------------------------|
 | Azure Blobs        | Supported                        | Supported                     | Supported                                      | Supported                    |
 | Azure Files (SMB)  | Supported                        | Not Supported                 | *Supported using Azure AD Domain Services Only | Not Supported                |
 | Azure Files (REST) | Supported                        | Supported                     | Not Supported                                  | Not Supported                |
 | Azure Queues       | Supported                        | Supported                     | Supported                                      | Not Supported                |
 | Azure Tables       | Supported                        | Supported                     | Not Supported                                  | Not Supported                |
+
+
+#### *Shared Access Key Authorization*
+
+> - Two Default Keys
+> - Access to entire storage account
+> - Protect from view (DO NOT HARD CODE)
+> - Regenerate Keys through Portal or CLI
+>   - Recommended to rotate keys periodically
+> - Consider Azure AD instead of Shared Keys 
+>   - If you use Shared Keys set them up in Key Vault as a Managed Instance
+
+
+#### *Shared Access Signatures (SAS)*
+
+- User Delegation 
+  - Azure Ad credentials and permissions to the SAS (Blob only)
+- Service
+  - Storage Account Key, Delegates access to only one of the Azure services at a time
+- Account
+  - Storage Account Key, Delegates access to one or more of the storage services
+
+- Additionally you can delegate access to read-write and delete operations within containers of blobs, tables, queues and file shares that are not permitted with a Service SAS.
+
+### *Azure AD Authorization*
+
+> - Supported for Blob and Queue storage
+> - Uses RBAC
+> - *Microsoft Recommended Approach*
+
+#### *Accessing Resources using Azure AD*
+
+> - Data Layer Permissions
+>   - Azure storage access that allows you to access blob and queue data, storage access but doesn't allow you to navigate resources in Azure.
+> - Management Permissions
+>   - Allows you to naviagte resources in Azure. Assigned with Azure Resource Manager role, 'Reader' role is best suited for most restricted access while allowing read access
+> - Should be scoped at storage account or higher (Resource Group or Subscription)
 
