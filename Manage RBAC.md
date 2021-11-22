@@ -21,9 +21,9 @@
 
 ### *Security Principals*
 
-**User:** Has a profile in AAD, can be assigned to suers in other tenants
+**User:** Has a profile in AAD, can be assigned to users in other tenants
 
-**Group:** Multiple users are assigned within this scope, roles assgined to a group impact all users
+**Group:** Multiple users are assigned within this scope, roles assigned to a group impact all users
 
 **Service Principal:** A security ID for applications or services to access specific Azure resource (User / Password for application)
 
