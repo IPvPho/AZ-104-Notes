@@ -33,7 +33,7 @@
 **Managed Identity:** 
 - Typically used in developing cloud applications to handle credential management (i.e. Key Vault)
 
-#### <ins>*Roles*</ins>
+### <ins>*Roles*</ins>
 (*Only apply to resource itself, not what the resource contains*)
 
 **Owner:** 
