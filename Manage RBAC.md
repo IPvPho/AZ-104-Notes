@@ -33,8 +33,11 @@
 (*Only apply to resource itself, not what the resource contains*)
 
 **Owner:** Full access to all resources and grant access
+
 **Contributor:** Can create/manage all resources, **cannot** grant access
+
 **Reader:** Can view existing resources, cannot manage (i.e. cannot start/stop a VM)
+
 **User Access Administrator:** Allows you to manage access to Azure resources
 
 #### *Deny Assignments*
