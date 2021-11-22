@@ -57,7 +57,7 @@
 - Can only be created using Azure Blueprints or Managed Apps
 
 
-### *Creating a Custom Role with PowerShell*
+### <ins>*Creating a Custom Role with PowerShell*</ins>
 ---
 
 ```PowerShell
