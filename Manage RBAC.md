@@ -1,8 +1,8 @@
 [//]: <> (AZ-104 Notes | Michael Teske | Pluralsight)
 
-# ***Manage Role-Based Access Control***
+# <ins>***Manage Role-Based Access Control***</ins>
 
-## **Role-Based Access Controls**
+## <ins>**Role-Based Access Controls**</ins>
 
 > - *RBAC can be used to assign permissions to:*
 >   - Users
@@ -13,13 +13,13 @@
 >   - Resource Groups
 >   - Single Resource
 
-*RBAC Examples:*
+<ins>*RBAC Examples:*</ins>
 
 > - Allow one user to manage VMs in a subscription and another user to manage vNets
 > - Allow a DBA (Database Administrator) group to manage SQL DBs in a subscription
 > - Allow an application to access all resources in a Resource Group
 
-### *Security Principals*
+### <ins>*Security Principals*</ins>
 
 **User:** Has a profile in AAD, can be assigned to users in other tenants
 
@@ -29,7 +29,7 @@
 
 **Managed Identity:** Typically used in developing cloud applications to handle credential management (i.e. Key Vault)
 
-#### *Roles*
+#### <ins>*Roles*</ins>
 (*Only apply to resource itself, not what the resource contains*)
 
 **Owner:** Full access to all resources and grant access
