@@ -5,7 +5,7 @@
 
 ### <ins>*Azure File Share*</ins>
 
-> - CLoud-based SMB or NFS file share
+> - Cloud-based SMB or NFS file share
 > - Accessible from Windows, MacOS, and Linux
 > - Clients use Port 445 (check prior that it's open)
 >   - 445 is a known attack vector, not recommended to use file share for public protection resources, use Site-to-Site VPN or ExpressRoute
